@@ -40,7 +40,6 @@ Caso queira manter na linha de comando execute "mvn spring-boot:run" para subir 
 Ou caso preferir utilize uma IDE de sua preferencia!
 
 
-https://github.com/brinogarcia/Autorizador/blob/master/Diagrama%20Listener%20SQS.png
 
 
 
