@@ -5,6 +5,7 @@ import com.autorizador.autorizador.core.request.TransactionRequest;
 import com.autorizador.autorizador.core.response.AutorizationResponse;
 import com.autorizador.autorizador.port.AutorizationCreditoService;
 import com.autorizador.autorizador.port.AutorizationDebitoService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ public class AutorizadorController {
 
     }
 
+    @Operation(summary = "Executar transação", description = "Executa transação de acordo com o Tipo CREDITO ou DEBITO, validando as informações da conta!")
     @PostMapping("/{transactionId}")
     public ResponseEntity<AutorizationResponse> autorization(@RequestBody TransactionRequest transactionRequest, @PathVariable String transactionId){
         switch (transactionRequest.getType()){
